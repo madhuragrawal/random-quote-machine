@@ -9,21 +9,6 @@ var currentQuote = "";
 var currentAuthor = "";
 let quotesData;
 
-var colors = [
-  "#16a085",
-  "#27ae60",
-  "#2c3e50",
-  "#f39c12",
-  "#e74c3c",
-  "#9b59b6",
-  "#FB6964",
-  "#342224",
-  "#472E32",
-  "#BDBB99",
-  "#77B1A9",
-  "#73A857",
-];
-
 function getQuotes() {
   var settings = {
     url: "https://type.fit/api/quotes",
@@ -52,10 +37,10 @@ function getQuote() {
   );
   $(".quote-text #text").text(randomQuote.text);
   $(".quote-author #author").html(randomQuote.author);
-  var color = Math.floor(Math.random() * colors.length);
-  $("html body").css("background-color", colors[color]);
-  $("html body").css("color", colors[color]);
-  $(".button").css("background-color", colors[color]);
+  // var color = Math.floor(Math.random() * colors.length);
+  // $("html body").css("background-color", colors[color]);
+  // $("html body").css("color", colors[color]);
+  // $(".button").css("background-color", colors[color]);
 }
 
 $(function () {
